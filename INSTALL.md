@@ -9,7 +9,7 @@
 mkdir -p ~/bin
 
 # 下载安装脚本
-curl -o ~/bin/install-skill https://raw.githubusercontent.com/your-username/stock-analyzer/main/scripts/install_skill.py
+curl -o ~/bin/install-skill https://raw.githubusercontent.com/mqq-persistence/stock-analyzer/main/scripts/install_skill.py
 chmod +x ~/bin/install-skill
 ```
 
@@ -17,10 +17,10 @@ chmod +x ~/bin/install-skill
 
 ```bash
 # 安装 Skill
-install-skill your-username/stock-analyzer
+install-skill mqq-persistence/stock-analyzer
 
 # 或者使用完整 URL
-install-skill https://github.com/your-username/stock-analyzer
+install-skill https://github.com/mqq-persistence/stock-analyzer
 ```
 
 ### 3. 在 Claude Code 中使用
@@ -36,7 +36,7 @@ claude
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/stock-analyzer.git
+git clone https://github.com/mqq-persistence/stock-analyzer.git
 cd stock-analyzer
 
 # 运行安装脚本
@@ -54,10 +54,10 @@ python scripts/install_skill.py .
 
 ```bash
 # 方法 A: Git 克隆
-git clone https://github.com/your-username/stock-analyzer.git ~/.claude/skills/stock-analyzer
+git clone https://github.com/mqq-persistence/stock-analyzer.git ~/.claude/skills/stock-analyzer
 
 # 方法 B: 下载 ZIP 解压后复制
-# 下载 https://github.com/your-username/stock-analyzer/archive/main.zip
+# 下载 https://github.com/mqq-persistence/stock-analyzer/archive/main.zip
 # 解压后将内容复制到 ~/.claude/skills/stock-analyzer
 ```
 
@@ -134,4 +134,4 @@ Skill 说明文档，包含：
 3. 推送到 GitHub
 4. 用户通过 `install-skill username/repo` 安装
 
-详细模板参考：https://github.com/your-username/stock-analyzer
+详细模板参考：https://github.com/mqq-persistence/stock-analyzer

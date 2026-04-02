@@ -36,7 +36,7 @@ python -m src.stock_analyzer.cli 20260403           # 分析指定日期
 
 ```bash
 # 在 Claude Code 中，使用 /install 命令
-/install your-username/stock-analyzer
+/install mqq-persistence/stock-analyzer
 
 # 或者手动克隆后启用
 git clone https://github.com/mqq-persistence/stock-analyzer.git ~/.claude/skills/stock-analyzer
@@ -152,10 +152,10 @@ git push -u origin main
 
 ```bash
 # 方法 1: 使用 /install 命令（如果 Claude Code 支持）
-/install your-username/stock-analyzer
+/install mqq-persistence/stock-analyzer
 
 # 方法 2: 手动克隆到 skills 目录
-git clone https://github.com/your-username/stock-analyzer.git ~/.claude/skills/stock-analyzer
+git clone https://github.com/mqq-persistence/stock-analyzer.git ~/.claude/skills/stock-analyzer
 
 # 方法 3: 下载后复制
 # 下载 ZIP 解压，将 skills 目录复制到 ~/.claude/skills/

@@ -1,106 +1,11 @@
 # GitHub Skill 发布清单
 
-## 发布前准备
+## 发布状态 ✅
 
-### 1. 更新 skill.json
-
-修改以下字段为你的实际信息：
-
-```json
-{
-  "name": "limit-up-analysis",
-  "version": "1.0.0",
-  "author": "Your Name",
-  "repository": "https://github.com/your-username/stock-analyzer",
-  "homepage": "https://github.com/your-username/stock-analyzer#readme"
-}
-```
-
-### 2. 更新 README.md
-
-替换所有 `your-username` 为你的 GitHub 用户名。
-
-### 3. 更新 INSTALL.md
-
-替换所有 `your-username` 为你的 GitHub 用户名。
-
----
-
-## 发布步骤
-
-### 步骤 1: 初始化 Git 仓库（如果还没有）
-
-```bash
-cd /Users/qiaozhuangzhu/companyProjects/claude-code-stock-analyzer
-git init
-git add .
-git commit -m "Initial commit: 涨停股分析 Skill"
-```
-
-### 步骤 2: 在 GitHub 创建仓库
-
-1. 访问 https://github.com/new
-2. 仓库名：`stock-analyzer`
-3. 描述：`涨停股分析工具 - Claude Code Skill`
-4. 设为 Public（公开）
-5. 创建仓库
-
-### 步骤 3: 推送代码
-
-```bash
-git remote add origin https://github.com/your-username/stock-analyzer.git
-git branch -M main
-git push -u origin main
-```
-
----
-
-## 安装测试
-
-### 方式 1: 使用全局安装脚本
-
-```bash
-# 下载安装脚本
-curl -o ~/bin/install-skill https://raw.githubusercontent.com/your-username/stock-analyzer/main/scripts/install_skill.py
-chmod +x ~/bin/install-skill
-
-# 安装 Skill
-install-skill your-username/stock-analyzer
-```
-
-### 方式 2: 手动克隆
-
-```bash
-git clone https://github.com/your-username/stock-analyzer.git ~/.claude/skills/stock-analyzer
-cd ~/.claude/skills/stock-analyzer
-pip install -e .
-```
-
-### 方式 3: 使用项目安装脚本
-
-```bash
-git clone https://github.com/your-username/stock-analyzer.git
-cd stock-analyzer
-./install.sh
-```
-
----
-
-## 验证安装
-
-在 Claude Code 中输入：
-
-```
-/skills
-```
-
-应该能看到 `limit-up-analysis.md`。
-
-然后测试：
-
-```
-分析今天的涨停股
-```
+- [x] 更新 skill.json
+- [x] 更新 README.md
+- [x] 更新 INSTALL.md
+- [x] 推送到 GitHub: https://github.com/mqq-persistence/stock-analyzer
 
 ---
 
@@ -129,6 +34,55 @@ stock-analyzer/
 ├── README.md                    # GitHub 主页说明
 ├── INSTALL.md                   # 详细安装指南
 └── CLAUDE.md                    # AI 上下文文档
+```
+
+---
+
+## 安装方式
+
+### 方式 1: 使用全局安装脚本
+
+```bash
+# 下载安装脚本
+curl -o ~/bin/install-skill https://raw.githubusercontent.com/mqq-persistence/stock-analyzer/main/scripts/install_skill.py
+chmod +x ~/bin/install-skill
+
+# 安装 Skill
+install-skill mqq-persistence/stock-analyzer
+```
+
+### 方式 2: 手动克隆
+
+```bash
+git clone https://github.com/mqq-persistence/stock-analyzer.git ~/.claude/skills/stock-analyzer
+cd ~/.claude/skills/stock-analyzer
+pip install -e .
+```
+
+### 方式 3: 使用项目安装脚本
+
+```bash
+git clone https://github.com/mqq-persistence/stock-analyzer.git
+cd stock-analyzer
+./install.sh
+```
+
+---
+
+## 验证安装
+
+在 Claude Code 中输入：
+
+```
+/skills
+```
+
+应该能看到 `limit-up-analysis.md`。
+
+然后测试：
+
+```
+分析今天的涨停股
 ```
 
 ---
@@ -182,4 +136,4 @@ A: 检查网络连接，AKShare 从东方财富网获取数据，可能需要稳
 
 ## 许可证
 
-MIT License - 详见 LICENSE 文件（可选添加）
+MIT License
