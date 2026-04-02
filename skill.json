@@ -2,10 +2,10 @@
   "name": "limit-up-analysis",
   "version": "1.0.0",
   "description": "涨停股分析 - 基于 AKShare 数据源筛选高质量涨停标的",
-  "author": "Your Name",
+  "author": "mqq-persistence",
   "license": "MIT",
-  "repository": "https://github.com/your-username/stock-analyzer",
-  "homepage": "https://github.com/your-username/stock-analyzer#readme",
+  "repository": "https://github.com/mqq-persistence/stock-analyzer",
+  "homepage": "https://github.com/mqq-persistence/stock-analyzer#readme",
   "tags": ["stock", "finance", "china", "akshare", "analysis"],
   "trigger_phrases": [
     "分析涨停股",

@@ -19,7 +19,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/stock-analyzer.git
+git clone https://github.com/mqq-persistence/stock-analyzer.git
 cd stock-analyzer
 
 # 安装依赖
@@ -39,24 +39,25 @@ python -m src.stock_analyzer.cli 20260403           # 分析指定日期
 /install your-username/stock-analyzer
 
 # 或者手动克隆后启用
-git clone https://github.com/your-username/stock-analyzer.git ~/.claude/skills/stock-analyzer
+git clone https://github.com/mqq-persistence/stock-analyzer.git ~/.claude/skills/stock-analyzer
 ```
 
 #### 使用 Skill
 
 安装后，在 Claude Code 对话中直接说：
+
 - "分析今天的涨停股"
 - "筛选封板强度高的股票"
 - "涨停股池分析"
 
 ## 筛选标准
 
-| 指标 | 阈值 | 说明 |
-|------|------|------|
-| 成交额 | > 1 亿 | 确保流动性充足 |
-| 封板成交比 | 前 25 | 封板强度排名 |
-| 换手率 | 10% - 20% | 适中活跃度 |
-| 板块涨跌幅 | ≥ 0% | 板块不拖后腿 |
+| 指标       | 阈值      | 说明           |
+| ---------- | --------- | -------------- |
+| 成交额     | > 1 亿    | 确保流动性充足 |
+| 封板成交比 | 前 25     | 封板强度排名   |
+| 换手率     | 10% - 20% | 适中活跃度     |
+| 板块涨跌幅 | ≥ 0%      | 板块不拖后腿   |
 
 ## 输出字段
 
@@ -74,15 +75,15 @@ git clone https://github.com/your-username/stock-analyzer.git ~/.claude/skills/s
 ]
 ```
 
-| 字段 | 说明 | 单位 |
-|------|------|------|
-| code | 股票代码 | - |
-| name | 股票名称 | - |
-| amount | 成交额 | 亿元 |
-| order_amount | 封单金额 | 亿元 |
-| ratio | 封板成交比 | - |
-| turnover | 换手率 | % |
-| sector | 所属板块 | - |
+| 字段         | 说明       | 单位 |
+| ------------ | ---------- | ---- |
+| code         | 股票代码   | -    |
+| name         | 股票名称   | -    |
+| amount       | 成交额     | 亿元 |
+| order_amount | 封单金额   | 亿元 |
+| ratio        | 封板成交比 | -    |
+| turnover     | 换手率     | %    |
+| sector       | 所属板块   | -    |
 
 ## 技术栈
 
@@ -131,7 +132,7 @@ stock-analyzer/
 本项目设计为可作为 Claude Code Skill 分发：
 
 1. **skill.json** - 包含 Skill 元数据（名称、版本、触发词、依赖等）
-2. **skills/*.md** - Skill 说明文档，描述功能和使用方式
+2. **skills/\*.md** - Skill 说明文档，描述功能和使用方式
 3. **install.sh** - 一键安装脚本
 
 ### 发布到 GitHub
@@ -143,7 +144,7 @@ git add .
 git commit -m "Initial commit"
 
 # 创建 GitHub 仓库并推送
-git remote add origin https://github.com/your-username/stock-analyzer.git
+git remote add origin https://github.com/mqq-persistence/stock-analyzer.git
 git push -u origin main
 ```
 
