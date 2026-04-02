@@ -1,0 +1,38 @@
+{
+  "name": "limit-up-analysis",
+  "version": "1.0.0",
+  "description": "涨停股分析 - 基于 AKShare 数据源筛选高质量涨停标的",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": "https://github.com/your-username/stock-analyzer",
+  "homepage": "https://github.com/your-username/stock-analyzer#readme",
+  "tags": ["stock", "finance", "china", "akshare", "analysis"],
+  "trigger_phrases": [
+    "分析涨停股",
+    "涨停股筛选",
+    "封板强度分析",
+    "涨停股池",
+    "打板分析"
+  ],
+  "requirements": {
+    "python": ">=3.10",
+    "dependencies": [
+      "akshare>=1.12.0",
+      "pandas>=2.0.0",
+      "numpy>=1.24.0"
+    ]
+  },
+  "entry_point": {
+    "module": "src.stock_analyzer.cli",
+    "function": "main"
+  },
+  "skill_file": "skills/limit-up-analysis.md",
+  "config": {
+    "filters": {
+      "min_amount": 1.0,
+      "min_turnover": 10.0,
+      "max_turnover": 20.0,
+      "top_n": 25
+    }
+  }
+}

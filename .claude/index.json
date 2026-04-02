@@ -1,0 +1,73 @@
+{
+  "projectName": "claude-code-stock-analyzer",
+  "projectSummary": "涨停股分析工具 - 基于 AKShare 数据源筛选高质量涨停标的 (支持 GitHub 分发)",
+  "lastUpdated": "2026-04-03T00:00:00",
+  "scanCoverage": {
+    "totalFiles": 18,
+    "scannedFiles": 18,
+    "coveragePercentage": 100,
+    "truncated": false
+  },
+  "ignoreRules": {
+    "source": "default",
+    "patterns": [
+      "node_modules/**",
+      ".git/**",
+      ".github/**",
+      "dist/**",
+      "build/**",
+      ".next/**",
+      "__pycache__/**",
+      "*.lock",
+      "*.log",
+      "*.bin",
+      "*.pdf",
+      "*.png",
+      "*.jpg",
+      "*.jpeg",
+      "*.gif",
+      "*.mp4",
+      "*.zip",
+      "*.tar",
+      "*.gz"
+    ]
+  },
+  "modules": [
+    {
+      "path": "src/stock_analyzer",
+      "name": "核心分析模块",
+      "files": [
+        "__init__.py",
+        "__main__.py",
+        "cli.py",
+        "limit_up.py"
+      ],
+      "entryPoint": "src/stock_analyzer/cli.py",
+      "dependencies": ["akshare>=1.12.0", "pandas>=2.0.0", "numpy>=1.24.0"],
+      "tests": ["tests/test_limit_up.py"]
+    },
+    {
+      "path": "skills",
+      "name": "AI Skills 文档",
+      "files": [
+        "limit-up-analysis.md"
+      ],
+      "description": "涨停股分析技能说明文档"
+    },
+    {
+      "path": "scripts",
+      "name": "安装脚本",
+      "files": [
+        "install-skill.sh",
+        "install_skill.py"
+      ],
+      "description": "Skill 安装器（Bash 和 Python 版本）"
+    }
+  ],
+  "gaps": [],
+  "nextSteps": [
+    "推送到 GitHub",
+    "更新 skill.json 中的仓库地址",
+    "发布使用文档"
+  ]
+}
