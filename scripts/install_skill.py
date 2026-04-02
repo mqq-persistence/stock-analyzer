@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Claude Code Skill 安装器
+Claude Code Skill 安装器 - 全局命令行工具
 
 用法:
-    python install_skill.py <github-repo>
-    python install_skill.py your-username/stock-analyzer
-    python install_skill.py https://github.com/your-username/stock-analyzer
+    install-skill <github-repo>
+    install-skill mqq-persistence/stock-analyzer
+    install-skill https://github.com/mqq-persistence/stock-analyzer
 """
 
 import os
@@ -131,8 +131,8 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         print("\n示例:")
-        print("  python install_skill.py your-username/stock-analyzer")
-        print("  python install_skill.py https://github.com/your-username/stock-analyzer")
+        print("  install-skill mqq-persistence/stock-analyzer")
+        print("  install-skill https://github.com/mqq-persistence/stock-analyzer")
         sys.exit(1)
 
     repo_url = sys.argv[1]
