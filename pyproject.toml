@@ -3,15 +3,39 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "stock-analyzer"
+name = "stock-analyzer-cn"
 version = "0.1.0"
 description = "股票分析工具 - 涨停股筛选与分析"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "mqq-persistence"}
+]
 requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+keywords = ["stock", "finance", "china", "akshare", "analysis", "涨停股"]
 dependencies = [
     "akshare>=1.12.0",
     "pandas>=2.0.0",
     "numpy>=1.24.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/mqq-persistence/stock-analyzer"
+Repository = "https://github.com/mqq-persistence/stock-analyzer.git"
+Issues = "https://github.com/mqq-persistence/stock-analyzer/issues"
+
+[project.scripts]
+stock-analyzer = "src.stock_analyzer.cli:main"
 
 [project.optional-dependencies]
 dev = [
